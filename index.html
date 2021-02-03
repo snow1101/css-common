@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .streak {
+            width: 300px;
+            height: 80px;
+            background: linear-gradient(#fb3 50%,#58a 50%);
+            background-size: 100% 20px;
+        }
+        .ruler {
+            width: 300px;
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+            margin-top: 50px;
+        }
+        .ruler li {
+            list-style: none;
+            position: relative;
+            flex: 1;
+            background: linear-gradient(to right, #ccc 1px, transparent 1px) repeat-x;
+            background-size: 10%  20%;
+        }
+        .ruler li::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1px;
+            height: 50%;
+            background-color: #a4a4a4;
+        }
+        .ruler li::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 1px;
+            height: 40%;
+            background-color: #a4a4a4;
+        }
+        .ruler li:last-child i{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 1px;
+            height: 50%;
+            background-color: #a4a4a4;
+        }
+    </style>
+</head>
+<body>
+    <h3>条纹背景（可做刻度尺）</h3>
+    <div class="streak"></div>
+    <div class="ruler">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li><i></i></li>
+    </div>
+</body>
+</html>
