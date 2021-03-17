@@ -4,6 +4,34 @@
 # css-common
 常用的css总结
 
+### CSS 整块文本溢出省略方案
+
+```javascript
+<style>
+.wrap {
+   width: 200px;
+    white-space: normal;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.wrap span{
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: purple;
+  border-radius: 5px; 
+}
+</style>
+<div class='wrap'>
+  <span>aaaaaaa</span>
+  <span>bbbbbb</span>
+  <span>vvvvvv</span>
+  <span>hhhhhhh</span>
+</div>
+```
+
 ### 长度单位又可以分为相对长度单位和绝对长度单位
 
 (1) 相对长度单位。相对长度单位又分为相对字体长度单位和相对视区长度单位。
