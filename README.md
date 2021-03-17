@@ -5,6 +5,8 @@
 常用的css总结
 
 ### CSS 整块文本溢出省略方案
+![warp](./img/wrap.png)
+
 
 ```javascript
 <style>
