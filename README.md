@@ -5,6 +5,37 @@
 # css-common
 常用的css总结
 
+### 伸缩盒子的超出一行文本溢出方案
+
+```
+<style>
+.wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.wrap child{
+  flex: 1;
+   width: 0;
+}
+.ellipsis {
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+.btn {
+    width: 80px;
+    height:25px;
+}
+</style>
+<div class='wrap'>
+    <div class='child'>
+    	<h3 class="ellipsis">testtesttesttesttesttesttest</h3>
+    </div>
+    <div class='btn'>提交</div>
+</div>
+```
+
 ### CSS 整块文本溢出省略方案
 ![warp](./img/wrap.png)
 
