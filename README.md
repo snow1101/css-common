@@ -85,6 +85,22 @@
 * 兄弟选择器:选择当前元素后面的所有合乎规则的兄弟元素。~连接。适用于 IE7 以上版本。
 * 相邻兄弟选择器:仅仅选择当前元素相邻的那个合乎规则的兄弟元素。+连接。适用于IE7 以上版本。
 
+###。:first-child 和:first-of-type 的区别
+```
+<style>
+// 在p不是其父元素的第一个字元素的时候。p:first-child 是不会生效的, 但是:first-of-type 会生效，因为选中的是一个p类型
+p:first-child { color: red};
+p:first-of-type { color: blue};
+</style>
+<div>
+	<div>aaaaa</div>
+	<p>tjagjgeja</p>
+	<p>tjagjgeja</p>
+	<p>tjagjgeja</p>
+	<p>tjagjgeja</p>
+<div>
+```
+
 ### “块级元素”和“display 为 block 的元素”不是一个概念
 
    例如li元素默认的 display 值是 list-item，table元素默认的 display 值是 table，但是它们 均是“块级元素”，因为它们都符合块级元素的基本特征，也就是一个水平流上只能单独显示一 个元素，多个块级元素则换行显示。
