@@ -2,6 +2,55 @@
 * [CSS的N个编码技巧](https://juejin.cn/post/6924206099193135111) (1. 九宫格图片展示 2.background-origin：content-box 3.蚂蚁行军边框 4.clip-path 5.伪类扩大可点击区域 6.毛玻璃效果 7.css fliter 8.动画属性 水波纹等)
 * [解剖postCSS](https://mp.weixin.qq.com/s/RuSWiouxkVI87bbC-4sEtw)
 
+# 常用的reset css
+
+```css
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1.15;
+  /* 它控制在设备横向或纵向切换时，是否允许浏览器自动调整文本的大小，以提高可读性 
+  * auto: 浏览器根据用户代理默认值自动调整文本大小。这通常是默认行为，允许浏览器在某些情况下（例如设备旋转或缩放）调整文本大小。
+  * none: 禁止浏览器自动调整文本大小。文本大小保持不变，不会因为设备的旋转或缩放而改变。
+  * 100%: 指定文本大小应保持为定义的原始大小，不进行任何调整。也就是说，当页面在不同设备上查看或在设备之间切换时，文本大小将保持与设计中设定的一致。
+  */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: none;  
+  /**
+  * -webkit-tap-highlight-color: transparent; 是一个 CSS 属性，用于在 WebKit 浏览器（例如 Google Chrome 和 Safari）中控制触摸设备上的点击高亮效果。
+  * 当用户在触摸屏设备（如智能手机或平板电脑）上点击一个可点击的元素时，默认情况下，浏览器会显示一个高亮效果来表示点击。
+  * 这个属性允许开发者自定义或禁用这个高亮效果。
+  */
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+  background: transparent;
+}
+img {
+  border: 0;
+  vertical-align: middle;
+  object-fit: contain;
+}
+/**
+* input 有一些自带的向上 和 向下的箭头 一般number类型会展示，用来展示+ 和 - ，去掉默认的展示
+*/
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  margin: 0;
+  appearance: none;
+}
+
+```
 # css-common
 常用的css总结
 
